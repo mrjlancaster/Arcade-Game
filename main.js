@@ -31,17 +31,24 @@ function moveEverything() {
     }
 }
 
+function drawEverything() {
+    colorRect(0, 0, canvas.width, canvas.height, 'black')
+
+    //left player
+    colorRect(0, 210, 10, 100, 'white');
+
+    //next line draws the ball
+    colorCircle(ballX, 150, 10, 'white');
+}
+
+function colorCircle(centerX, centerY, radius, drawColor) {
+    canvasContext.fillStyle = drawColor;
+    canvasContext.beginPath();
+    canvasContext.arc(centerX, centerY, radius, 0, Math.PI*2, true);
+    canvasContext.fill();
+}
+
 function colorRect(leftX, topY, width, height, drawColor) {
     canvasContext.fillStyle = drawColor;
     canvasContext.fillRect(leftX, topY, width, height);
-}
-
-function drawEverything() {
-
-    canvasContext.fillStyle = "black";
-    canvasContext.fillRect(0, 0, canvas.width, canvas.height);
-    canvasContext.fillStyle = 'white';
-    canvasContext.fillRect(0, 210, 10, 100);
-    canvasContext.fillStyle = 'red';
-    canvasContext.fillRect(ballX, 100, 10, 10);
 }
