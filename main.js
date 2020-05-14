@@ -5,6 +5,21 @@ let ballY = 50;
 let ballSpeedX = 10;
 let ballSpeedY = 4;
 
+let paddle1Y = 250;
+let paddle2Y = 250;
+const PADDLE_HEIGHT = 100;
+
+function calcMousePosition(evt) {
+    let rect = canvas.getBoundingClientRect();
+    let root = document.documentElement;
+    let mouseX = evt.clientX - rect.left - root.scrollLeft;
+    let mouseY = evt.clientY - rect.right - root.scrollRight;
+    return {
+        x: mouseX,
+        y: mouseY
+    };
+}
+
 
 
 window.onload = function() {
