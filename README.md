@@ -1,2 +1,2 @@
 # Game
-Simple game using JavaScript.
+Simple Arcade game using JavaScript.
