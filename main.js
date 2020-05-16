@@ -27,10 +27,20 @@ function calcMousePosition(evt) {
     };
 }
 
+function handleMouseClick(evt) {
+    if (showingWinScreen) {
+        player1Score = 0;
+        player2Score = 0;
+        showingWinScreen = false;
+    }
+}
+
 window.onload = function() {
     console.log("Hello World!");
     canvas = document.getElementById('gameCanvas');
     canvasContext = canvas.getContext('2d');
+
+    canvas.addEventListener('mousedown', handleMouseClick);
 
     let framesPerSecond = 30;
     setInterval(function() {
