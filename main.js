@@ -110,6 +110,12 @@ function moveEverything() {
     }
 }
 
+function drawNet() {
+    for (let i = 0; i < canvas.height; i += 40) {
+        colorRect(canvas.width/2-1, i, 2, 20, 'white');
+        }
+}
+
 function drawEverything() {
     colorRect(0, 0, canvas.width, canvas.height, 'black')
 
@@ -126,6 +132,8 @@ function drawEverything() {
 
         return;
     }
+
+    drawNet()
 
     //left player
     colorRect(2, paddle1Y, PADDLE_THICKNESS, PADDLE_HEIGHT, 'white');
