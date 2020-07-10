@@ -1,18 +1,18 @@
-const canvas;
-const canvasContext;
-const ballX = 50;
-const ballY = 50;
-const ballSpeedX = 10;
-const ballSpeedY = 4;
+let canvas;
+let canvasContext;
+let ballX = 50;
+let ballY = 50;
+let ballSpeedX = 10;
+let ballSpeedY = 4;
 
-const showingWinScreen = false;
+let showingWinScreen = false;
 
-const player1Score = 0;
-const player2Score = 0;
-const  WINNING_SCORE = 3;
+let player1Score = 0;
+let player2Score = 0;
+let  WINNING_SCORE = 3;
 
-const paddle1Y = 250;
-const paddle2Y = 250;
+let paddle1Y = 250;
+let paddle2Y = 250;
 const PADDLE_HEIGHT = 100;
 const PADDLE_THICKNESS = 10;
 
